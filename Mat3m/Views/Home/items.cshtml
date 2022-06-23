@@ -1,0 +1,37 @@
+﻿
+<section id="portfolio" class="portfolio">
+
+    <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+
+            <p>قائمة الطعام</p>
+        </header>
+
+        
+
+        <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="~/./assets/img/@item.Image" width="300"height="300" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>@item.Price L.E</h4>
+                            <p>@item.Product</p>
+                            <div class="portfolio-links">
+                                <a href="#" title="More Details"><i class="bi bi-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+
+        </div>
+    </div>
+
+   
+
+</section><!-- End Portfolio Section -->

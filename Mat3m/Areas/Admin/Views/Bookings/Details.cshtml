@@ -1,0 +1,38 @@
+﻿@model Mat3m.Models.Booking
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>تفاصيل</h1>
+
+<div>
+    <h4>الحجز</h4>
+    <hr />
+    <div class="container-fluid">
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.TableNumber)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TableNumber)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info">Edit</a> |
+        <a asp-action="Index" class="btn btn-dark">Back to List</a>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+﻿
+
+
+
+
+<div class="row my-4 ">
+    <div class="col-lg-8 col-md-6 mb-md-0 mb-4 container-fluid">
+        <div class="card ">
+            <div class="card-header pb-0">
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <h6>التعيقات</h6>
+                        <p class="text-sm">
+                            <i class="fa fa-check text-info" aria-hidden="true"></i>
+                            <span class="font-weight-bold ms-1">اراء عملائنا في خدمتنا </span> هنا
+                        </p>
+                    </div>
+                    <div class="col-6 my-auto text-start">
+                        <div class="dropdown float-start ps-4">
+                            <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-ellipsis-v text-secondary"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end px-2 py-3 me-n4" aria-labelledby="dropdownTable">
+                                <li><a class="dropdown-item border-radius-md" href="javascript:;">عمل</a></li>
+                                <li><a class="dropdown-item border-radius-md" href="javascript:;">عمل آخر</a></li>
+                                <li><a class="dropdown-item border-radius-md" href="javascript:;">شيء آخر هنا</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body p-0 pb-2">
+                <div class="table-responsive">
+                    @foreach (var item in Model)
+                    {
+                        <table class="table align-items-center mb-0 table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">البريد الاليكتروني</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">الاسم</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">رقم الهاتف</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">الرساله</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex px-2 py-1">
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="mb-0 text-sm">@Model.Email</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="avatar-group mt-2">
+                                            <h6 class="mb-0 text-sm">@Model.Name</h6>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle text-center text-sm">
+                                        <div class="avatar-group mt-2">
+                                            <h6 class="mb-0 text-sm">@Model.Titel</h6>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="progress-wrapper w-75 mx-auto">
+                                            <div class="avatar-group mt-2">
+                                                <h6 class="mb-0 text-sm">@Model.Massage</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

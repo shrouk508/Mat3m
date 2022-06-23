@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Mat3m.Models.ContactUs>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>التعليقات</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success"  style="margin:5px">انشاء تعليق</a>
+</p>
+<div class="container-fluid">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th style="color:crimson">
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th style="color:crimson">
+                    Phone
+                </th>
+                <th style="color:crimson">
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th style="color:crimson">
+                    @Html.DisplayNameFor(model => model.Massage)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Titel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Massage)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-dark">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

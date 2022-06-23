@@ -1,0 +1,62 @@
+﻿@using Mat3m.Areas.Admin.Controllers
+@model AdminNumbers
+<!-- End Navbar -->
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
+            <div class="card">
+                <div class="card-header p-3 pt-2">
+                    <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                        <i class="material-icons opacity-10">weekend</i>
+                    </div>
+                    <div class="text-start pt-1">
+                        <p class="text-sm mb-0 text-capitalize">اقسام المطعم</p>
+                        <h4 class="mb-0">@Model.Cat</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card">
+                <div class="card-header p-3 pt-2">
+                    <div class="icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute">
+                        <i class="material-icons opacity-10">person_add</i>
+                    </div>
+                    <div class="text-start pt-1">
+                        <p class="text-sm mb-0 text-capitalize">اصناف المطعم</p>
+                        <h4 class="mb-0">@Model.Itm</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
+            <div class="card">
+                <div class="card-header p-3 pt-2">
+                    <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
+                        <i class="material-icons opacity-10">leaderboard</i>
+                    </div>
+                    <div class="text-start pt-1">
+                        <p class="text-sm mb-0 text-capitalize">عدد الحجوزات</p>
+                        <h4 class="mb-0">@Model.Table</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
+            <div class="card">
+                <div class="card-header p-3 pt-2">
+                    <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
+                        <i class="material-icons opacity-10">store</i>
+                    </div>
+                    <div class="text-start pt-1">
+                        <p class="text-sm mb-0 text-capitalize">التعليقات</p>
+                        <h4 class="mb-0">@Model.COM</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+

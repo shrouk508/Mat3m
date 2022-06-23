@@ -1,0 +1,59 @@
+﻿
+@model Order
+<section id="contact" class="contact">
+
+    <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+
+            <p>طلب الاوردر</p>
+        </header>
+
+        <div class="row">
+
+            <div class="col-lg-12">
+
+
+            </div>
+
+            <div class="col-lg-6">
+                <form asp-action="Orderdd" method="post">
+                    <div class="row gy-4">
+
+                        <div class="col-md-12">
+                            <input type="text" asp-for="Name" class="form-control" placeholder=" الاسم الاول" required>
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <input type="text" class="form-control"asp-for="Phone" placeholder="رقم الهاتف" required>
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" asp-for="Address" placeholder="العنوان" required>
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-12">
+                            <textarea class="form-control" asp-for="Deatiles" rows="6" placeholder="التفاصيل" required></textarea>
+                            <span asp-validation-for="Deatiles" class="text-danger"></span>
+                        </div>
+
+
+
+
+                        <div class="col-md-12 text-center">
+                            <button type="submit"class="btn btn-info" style="padding: 10px 30px; color: #ffffff "><strong>الطلب</strong></button>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section><!-- End Contact Section -->
